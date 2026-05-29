@@ -1,0 +1,5 @@
+.env
+*.db
+*.exe
+tmp/
+.air.toml

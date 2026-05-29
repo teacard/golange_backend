@@ -1,0 +1,43 @@
+package config
+
+import (
+	"os"
+
+	"github.com/joho/godotenv"
+)
+
+// Config 對應 .env 的所有設定
+type Config struct {
+	DBHost     string
+	DBPort     string
+	DBUser     string
+	DBPassword string
+	DBName     string
+	DBSSLMode  string
+	ServerPort string
+}
+
+// App 是全域設定實例，載入後直接用 config.App.DBHost 存取
+var App *Config
+
+// Load 讀取 .env 並初始化 App
+func Load() {
+	godotenv.Load() // 找不到 .env 不會報錯，直接讀系統環境變數
+
+	App = &Config{
+		DBHost:     getEnv("DB_HOST", "localhost"),
+		DBPort:     getEnv("DB_PORT", "5432"),
+		DBUser:     getEnv("DB_USER", "postgres"),
+		DBPassword: getEnv("DB_PASSWORD", ""),
+		DBName:     getEnv("DB_NAME", "game_db"),
+		DBSSLMode:  getEnv("DB_SSLMODE", "disable"),
+		ServerPort: getEnv("SERVER_PORT", "8000"),
+	}
+}
+
+func getEnv(key, defaultValue string) string {
+	if value := os.Getenv(key); value != "" {
+		return value
+	}
+	return defaultValue
+}

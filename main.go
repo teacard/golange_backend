@@ -1,0 +1,29 @@
+package main
+
+import (
+	"game-backend/config"
+	"game-backend/db"
+	"game-backend/logger"
+	"game-backend/router"
+	"game-backend/seeder"
+)
+
+func main() {
+	// 1. 載入 .env 設定
+	config.Load()
+
+	// 2. 初始化 logger
+	log := logger.New()
+
+	// 3. 連接資料庫 + 執行 Migration（golang-migrate）
+	db.Init(log)
+
+	// 4. 執行 Seeder（寫入初始資料）
+	seeder.RunAll(log)
+
+	// 5. 啟動 HTTP 路由
+	r := router.Setup()
+
+	log.Infof("伺服器啟動於 http://localhost:%s", config.App.ServerPort)
+	r.Run(":" + config.App.ServerPort)
+}
