@@ -1,0 +1,1926 @@
+{
+  "version": "2.13",
+  "children": [
+    {
+      "type": "frame",
+      "id": "LvMqe",
+      "x": 880,
+      "y": 0,
+      "name": "Admin Preview",
+      "clip": true,
+      "width": 1280,
+      "height": 800,
+      "fill": "#0C0E14",
+      "children": [
+        {
+          "type": "frame",
+          "id": "c3Xje4",
+          "name": "Sidebar",
+          "width": 60,
+          "height": "fill_container",
+          "fill": "#13161E",
+          "stroke": "#262C3E",
+          "strokeWidth": {
+            "right": 1
+          },
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "CkHfK",
+              "name": "Logo Area",
+              "width": "fill_container",
+              "height": 60,
+              "stroke": "#262C3E",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 6,
+                  "id": "B7Eim",
+                  "name": "Logo Icon",
+                  "fill": "#9CA3AF",
+                  "width": 28,
+                  "height": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DKuto",
+              "name": "Nav List",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                8,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "rvxrG",
+                  "name": "Dashboard Nav",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#00000000",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 4,
+                      "id": "m3Dy6x",
+                      "name": "Dashboard Icon",
+                      "fill": "#9CA3AF",
+                      "width": 20,
+                      "height": 20
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JDmOK",
+                  "name": "Staff Nav",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#222736",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 4,
+                      "id": "Wc2NB",
+                      "name": "Staff Icon",
+                      "fill": "#E8EAF0",
+                      "width": 20,
+                      "height": 20
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fCuV8",
+                  "name": "Players Nav",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#00000000",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 4,
+                      "id": "FRvYc",
+                      "name": "Players Icon",
+                      "fill": "#9CA3AF",
+                      "width": 20,
+                      "height": 20
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "cUIel",
+                  "name": "Events Nav",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#00000000",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 4,
+                      "id": "Q35U8C",
+                      "name": "Events Icon",
+                      "fill": "#9CA3AF",
+                      "width": 20,
+                      "height": 20
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pmkk2",
+                  "name": "Creatures Nav",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#00000000",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 4,
+                      "id": "nMIIM",
+                      "name": "Creatures Icon",
+                      "fill": "#9CA3AF",
+                      "width": 20,
+                      "height": 20
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "T40ij",
+                  "name": "Logs Nav",
+                  "width": "fill_container",
+                  "height": 44,
+                  "fill": "#00000000",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 4,
+                      "id": "qvh3J",
+                      "name": "Logs Icon",
+                      "fill": "#9CA3AF",
+                      "width": 20,
+                      "height": 20
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lgRp6",
+              "layoutPosition": "absolute",
+              "x": 0,
+              "y": 740,
+              "name": "Sidebar Bottom",
+              "width": 60,
+              "height": 60,
+              "stroke": "#262C3E",
+              "strokeWidth": {
+                "top": 1
+              },
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "qRdTe",
+                  "name": "User Avatar",
+                  "fill": "#374151",
+                  "width": 32,
+                  "height": 32
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "I7aF6",
+          "name": "Main Content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "#0C0E14",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "OcIw6",
+              "name": "Header",
+              "width": "fill_container",
+              "height": 56,
+              "fill": "#0C0E14",
+              "stroke": "#262C3E",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "padding": [
+                0,
+                24
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "x3zWS",
+                  "name": "Page Title",
+                  "fill": "#E8EAF0",
+                  "content": "後台人員管理",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "pKkNj",
+                  "name": "Spacer",
+                  "width": "fill_container",
+                  "height": 1,
+                  "fill": "#00000000"
+                },
+                {
+                  "type": "frame",
+                  "id": "hchRB",
+                  "name": "Header Actions",
+                  "height": 32,
+                  "fill": "#00000000",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fzvkI",
+                      "name": "Admin User",
+                      "fill": "#9CA3AF",
+                      "content": "Admin",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "foq7B",
+              "name": "Body",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "#0C0E14",
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "yz101",
+                  "name": "Stats Row",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Y6hU6u",
+                      "name": "後台人員 Card",
+                      "width": "fill_container",
+                      "height": 84,
+                      "fill": "#1A1E2A",
+                      "cornerRadius": 8,
+                      "stroke": "#262C3E",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "YklaI",
+                          "name": "後台人員 Value",
+                          "fill": "#E8EAF0",
+                          "content": "12",
+                          "fontFamily": "Inter",
+                          "fontSize": 24,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "s7qr2O",
+                          "name": "後台人員 Label",
+                          "fill": "#9CA3AF",
+                          "content": "後台人員",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "u6DV9",
+                      "name": "本月新增 Card",
+                      "width": "fill_container",
+                      "height": 84,
+                      "fill": "#1A1E2A",
+                      "cornerRadius": 8,
+                      "stroke": "#262C3E",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "y6jGY",
+                          "name": "本月新增 Value",
+                          "fill": "#E8EAF0",
+                          "content": "3",
+                          "fontFamily": "Inter",
+                          "fontSize": 24,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "DVAPO",
+                          "name": "本月新增 Label",
+                          "fill": "#9CA3AF",
+                          "content": "本月新增",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "x9ErH1",
+                      "name": "最後登入 Card",
+                      "width": "fill_container",
+                      "height": 84,
+                      "fill": "#1A1E2A",
+                      "cornerRadius": 8,
+                      "stroke": "#262C3E",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        20
+                      ],
+                      "justifyContent": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WKKfP",
+                          "name": "最後登入 Value",
+                          "fill": "#E8EAF0",
+                          "content": "今天",
+                          "fontFamily": "Inter",
+                          "fontSize": 24,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Ut8Ke",
+                          "name": "最後登入 Label",
+                          "fill": "#9CA3AF",
+                          "content": "最後登入",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "slLAD",
+                  "name": "Table Section",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#1A1E2A",
+                  "cornerRadius": 8,
+                  "stroke": "#262C3E",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "JWq1b",
+                      "name": "Table Bar",
+                      "width": "fill_container",
+                      "height": 52,
+                      "fill": "#1A1E2A",
+                      "stroke": "#262C3E",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "gap": 12,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "F0MLer",
+                          "name": "Table Title",
+                          "fill": "#E8EAF0",
+                          "content": "人員列表",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "j5TTmq",
+                          "name": "Bar Spacer",
+                          "width": "fill_container",
+                          "height": 1,
+                          "fill": "#00000000"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "C5Ty4y",
+                          "name": "Add Button",
+                          "fill": "#374151",
+                          "cornerRadius": 6,
+                          "gap": 6,
+                          "padding": [
+                            8,
+                            14
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "JcDNI",
+                              "name": "Add Btn Text",
+                              "fill": "#E8EAF0",
+                              "content": "+ 新增人員",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YMgNy",
+                      "name": "Column Header",
+                      "width": "fill_container",
+                      "height": 36,
+                      "fill": "#161A24",
+                      "stroke": "#262C3E",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "siGn4",
+                          "name": "姓名 Col",
+                          "fill": "#5C6478",
+                          "textGrowth": "fixed-width",
+                          "width": 160,
+                          "content": "姓名",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "q63iZw",
+                          "name": "帳號 Col",
+                          "fill": "#5C6478",
+                          "textGrowth": "fixed-width",
+                          "width": 180,
+                          "content": "帳號",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "yvBwP",
+                          "name": "角色 Col",
+                          "fill": "#5C6478",
+                          "textGrowth": "fixed-width",
+                          "width": 100,
+                          "content": "角色",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "JdbX6",
+                          "name": "狀態 Col",
+                          "fill": "#5C6478",
+                          "textGrowth": "fixed-width",
+                          "width": 100,
+                          "content": "狀態",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "rR3nO",
+                          "name": "最後登入 Col",
+                          "fill": "#5C6478",
+                          "textGrowth": "fixed-width",
+                          "width": 140,
+                          "content": "最後登入",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Giw8A",
+                          "name": "操作 Col",
+                          "fill": "#5C6478",
+                          "textGrowth": "fixed-width",
+                          "width": 80,
+                          "content": "操作",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kAphx",
+                      "name": "Row 王小明",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "#1A1E2A",
+                      "stroke": "#262C3E",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "LpzoO",
+                          "name": "Name",
+                          "fill": "#E8EAF0",
+                          "textGrowth": "fixed-width",
+                          "width": 160,
+                          "content": "王小明",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "r7Xbyy",
+                          "name": "Account",
+                          "fill": "#9CA3AF",
+                          "textGrowth": "fixed-width",
+                          "width": 180,
+                          "content": "wang@admin.com",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "KI2Sk",
+                          "name": "Role",
+                          "fill": "#9CA3AF",
+                          "textGrowth": "fixed-width",
+                          "width": 100,
+                          "content": "超級管理員",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "bXCe5",
+                          "name": "Status Badge",
+                          "width": 100,
+                          "fill": "#052E16",
+                          "cornerRadius": 20,
+                          "padding": [
+                            4,
+                            10
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "YzZwp",
+                              "name": "Status Text",
+                              "fill": "#34D399",
+                              "content": "● 啟用",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "XLpd2",
+                          "name": "Last Login",
+                          "fill": "#5C6478",
+                          "textGrowth": "fixed-width",
+                          "width": 140,
+                          "content": "2026-06-01",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "aKrvO",
+                          "name": "Actions",
+                          "width": 80,
+                          "fill": "#00000000",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "YPbE9",
+                              "name": "Edit",
+                              "fill": "#9CA3AF",
+                              "content": "編輯",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "u73fRf",
+                      "name": "Row 李阿花",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "#1D2130",
+                      "stroke": "#262C3E",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "j1ZNzb",
+                          "name": "Name",
+                          "fill": "#E8EAF0",
+                          "textGrowth": "fixed-width",
+                          "width": 160,
+                          "content": "李阿花",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Huamt",
+                          "name": "Account",
+                          "fill": "#9CA3AF",
+                          "textGrowth": "fixed-width",
+                          "width": 180,
+                          "content": "lee@admin.com",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Zv63h",
+                          "name": "Role",
+                          "fill": "#9CA3AF",
+                          "textGrowth": "fixed-width",
+                          "width": 100,
+                          "content": "編輯員",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "vt1zO",
+                          "name": "Status Badge",
+                          "width": 100,
+                          "fill": "#052E16",
+                          "cornerRadius": 20,
+                          "padding": [
+                            4,
+                            10
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "WJXvA",
+                              "name": "Status Text",
+                              "fill": "#34D399",
+                              "content": "● 啟用",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "nsYuW",
+                          "name": "Last Login",
+                          "fill": "#5C6478",
+                          "textGrowth": "fixed-width",
+                          "width": 140,
+                          "content": "2026-05-30",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "tpXmm",
+                          "name": "Actions",
+                          "width": 80,
+                          "fill": "#00000000",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Pz419",
+                              "name": "Edit",
+                              "fill": "#9CA3AF",
+                              "content": "編輯",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UPVnV",
+                      "name": "Row 陳大偉",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "#1A1E2A",
+                      "stroke": "#262C3E",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dwGNQ",
+                          "name": "Name",
+                          "fill": "#E8EAF0",
+                          "textGrowth": "fixed-width",
+                          "width": 160,
+                          "content": "陳大偉",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "SEBX4",
+                          "name": "Account",
+                          "fill": "#9CA3AF",
+                          "textGrowth": "fixed-width",
+                          "width": 180,
+                          "content": "chen@admin.com",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ING8Z",
+                          "name": "Role",
+                          "fill": "#9CA3AF",
+                          "textGrowth": "fixed-width",
+                          "width": 100,
+                          "content": "客服",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "odmlP",
+                          "name": "Status Badge",
+                          "width": 100,
+                          "fill": "#1C1917",
+                          "cornerRadius": 20,
+                          "padding": [
+                            4,
+                            10
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "hkFKB",
+                              "name": "Status Text",
+                              "fill": "#5C6478",
+                              "content": "● 停用",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "p0fq7x",
+                          "name": "Last Login",
+                          "fill": "#5C6478",
+                          "textGrowth": "fixed-width",
+                          "width": 140,
+                          "content": "2026-05-10",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "syaYl",
+                          "name": "Actions",
+                          "width": 80,
+                          "fill": "#00000000",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ayJDD",
+                              "name": "Edit",
+                              "fill": "#9CA3AF",
+                              "content": "編輯",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "pq7dM",
+                      "name": "Row 林小芳",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "#1D2130",
+                      "stroke": "#262C3E",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "BBMTo",
+                          "name": "Name",
+                          "fill": "#E8EAF0",
+                          "textGrowth": "fixed-width",
+                          "width": 160,
+                          "content": "林小芳",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "lUCGs",
+                          "name": "Account",
+                          "fill": "#9CA3AF",
+                          "textGrowth": "fixed-width",
+                          "width": 180,
+                          "content": "lin@admin.com",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "z4dgW",
+                          "name": "Role",
+                          "fill": "#9CA3AF",
+                          "textGrowth": "fixed-width",
+                          "width": 100,
+                          "content": "編輯員",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "pN0hW",
+                          "name": "Status Badge",
+                          "width": 100,
+                          "fill": "#052E16",
+                          "cornerRadius": 20,
+                          "padding": [
+                            4,
+                            10
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "JO5W7",
+                              "name": "Status Text",
+                              "fill": "#34D399",
+                              "content": "● 啟用",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "W2ogAc",
+                          "name": "Last Login",
+                          "fill": "#5C6478",
+                          "textGrowth": "fixed-width",
+                          "width": 140,
+                          "content": "2026-05-31",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ozKqp",
+                          "name": "Actions",
+                          "width": 80,
+                          "fill": "#00000000",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "FQ2ZN",
+                              "name": "Edit",
+                              "fill": "#9CA3AF",
+                              "content": "編輯",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "PEgAH",
+      "x": 2240,
+      "y": 0,
+      "name": "Style Guide",
+      "clip": true,
+      "width": 1100,
+      "height": 900,
+      "fill": "#0C0E14",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": 40,
+      "children": [
+        {
+          "type": "text",
+          "id": "d2UHGo",
+          "name": "Guide Title",
+          "fill": "#E8EAF0",
+          "content": "草原精靈獸後台 — 設計規範",
+          "fontFamily": "Inter",
+          "fontSize": 18,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "BeNY1",
+          "name": "Typography Section",
+          "clip": true,
+          "width": "fill_container",
+          "fill": "#1A1E2A",
+          "cornerRadius": 8,
+          "stroke": "#262C3E",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "oksrd",
+              "name": "Typo Header",
+              "width": "fill_container",
+              "height": 40,
+              "fill": "#161A24",
+              "stroke": "#262C3E",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "k3QzgG",
+                  "name": "Typo Title",
+                  "fill": "#5C6478",
+                  "content": "Typography",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rZiRS",
+              "name": "Typo Body",
+              "width": "fill_container",
+              "padding": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "emRvn",
+                  "name": "頁面標題 Col",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "RvmL4",
+                      "name": "頁面標題 Sample",
+                      "fill": "#E8EAF0",
+                      "content": "後台人員管理",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "S1Swc",
+                      "name": "頁面標題 Meta",
+                      "fill": "#5C6478",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "頁面標題\n15px / 600",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "iFhAC",
+                  "name": "區塊標題 Col",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OFROg",
+                      "name": "區塊標題 Sample",
+                      "fill": "#E8EAF0",
+                      "content": "人員列表",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "qJuum",
+                      "name": "區塊標題 Meta",
+                      "fill": "#5C6478",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "區塊標題\n14px / 600",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UKrL8",
+                  "name": "數字大標 Col",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "S69gJ9",
+                      "name": "數字大標 Sample",
+                      "fill": "#E8EAF0",
+                      "content": "1,284",
+                      "fontFamily": "Inter",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "JmuZk",
+                      "name": "數字大標 Meta",
+                      "fill": "#5C6478",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "數字大標\n24px / 700",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HKJi6",
+                  "name": "表格主要 Col",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WMgU1",
+                      "name": "表格主要 Sample",
+                      "fill": "#E8EAF0",
+                      "content": "王小明",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "text",
+                      "id": "apTSM",
+                      "name": "表格主要 Meta",
+                      "fill": "#5C6478",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "表格主要\n13px / 400",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "H2b2wP",
+                  "name": "表格次要 Col",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ghpbw",
+                      "name": "表格次要 Sample",
+                      "fill": "#9CA3AF",
+                      "content": "wang@admin.com",
+                      "fontFamily": "Inter",
+                      "fontSize": 13
+                    },
+                    {
+                      "type": "text",
+                      "id": "gaAPu",
+                      "name": "表格次要 Meta",
+                      "fill": "#5C6478",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "表格次要\n13px / 400",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pyk9O",
+                  "name": "欄位標籤 Col",
+                  "width": "fill_container",
+                  "fill": "#00000000",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "G1SIWy",
+                      "name": "欄位標籤 Sample",
+                      "fill": "#5C6478",
+                      "content": "帳號",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Q9tPIT",
+                      "name": "欄位標籤 Meta",
+                      "fill": "#5C6478",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "欄位標籤\n12px / 500",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "z7cd2",
+          "name": "Button Section",
+          "clip": true,
+          "width": "fill_container",
+          "fill": "#1A1E2A",
+          "cornerRadius": 8,
+          "stroke": "#262C3E",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "g7Q6T3",
+              "name": "Btn Header",
+              "width": "fill_container",
+              "height": 40,
+              "fill": "#161A24",
+              "stroke": "#262C3E",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "g4cu8",
+                  "name": "Btn Title",
+                  "fill": "#5C6478",
+                  "content": "Buttons & Badges",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Z4ALI",
+              "name": "Btn Body",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "gap": 16,
+              "padding": 20,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "U2Bfrf",
+                  "name": "Primary Btn",
+                  "fill": "#374151",
+                  "cornerRadius": 6,
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CPe6d",
+                      "name": "Primary Btn Text",
+                      "fill": "#E8EAF0",
+                      "content": "+ 新增人員",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "p3GWML",
+                  "name": "Secondary Btn",
+                  "fill": "#00000000",
+                  "cornerRadius": 6,
+                  "stroke": "#9CA3AF",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qVvjk",
+                      "name": "Sec Btn Text",
+                      "fill": "#C8CBD3",
+                      "content": "匯出",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AdbZw",
+                  "name": "Danger Btn",
+                  "fill": "#00000000",
+                  "cornerRadius": 6,
+                  "stroke": "#F87171",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "B69lH",
+                      "name": "Danger Btn Text",
+                      "fill": "#F87171",
+                      "content": "刪除",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "ntM48",
+                  "name": "Divider",
+                  "fill": "#262C3E",
+                  "width": 1,
+                  "height": 28
+                },
+                {
+                  "type": "frame",
+                  "id": "DUMHC",
+                  "name": "● 啟用 Badge",
+                  "fill": "#052E16",
+                  "cornerRadius": 20,
+                  "padding": [
+                    4,
+                    10
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZGZzo",
+                      "name": "● 啟用 Text",
+                      "fill": "#34D399",
+                      "content": "● 啟用",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wlB0C",
+                  "name": "● 停用 Badge",
+                  "fill": "#2A2A2A",
+                  "cornerRadius": 20,
+                  "padding": [
+                    4,
+                    10
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "h9OS18",
+                      "name": "● 停用 Text",
+                      "fill": "#9CA3AF",
+                      "content": "● 停用",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "n43AQd",
+                  "name": "● 警告 Badge",
+                  "fill": "#1C1400",
+                  "cornerRadius": 20,
+                  "padding": [
+                    4,
+                    10
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "H6S2I",
+                      "name": "● 警告 Text",
+                      "fill": "#FBBF24",
+                      "content": "● 警告",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "BAXlu",
+                  "name": "● 錯誤 Badge",
+                  "fill": "#1C0000",
+                  "cornerRadius": 20,
+                  "padding": [
+                    4,
+                    10
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XRvB5",
+                      "name": "● 錯誤 Text",
+                      "fill": "#F87171",
+                      "content": "● 錯誤",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PBQjW",
+                  "name": "● 資訊 Badge",
+                  "fill": "#0A1628",
+                  "cornerRadius": 20,
+                  "padding": [
+                    4,
+                    10
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OuePU",
+                      "name": "● 資訊 Text",
+                      "fill": "#60A5FA",
+                      "content": "● 資訊",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "iXHmH",
+          "name": "Form Section",
+          "clip": true,
+          "width": "fill_container",
+          "fill": "#1A1E2A",
+          "cornerRadius": 8,
+          "stroke": "#262C3E",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "q81SQ",
+              "name": "Form Header",
+              "width": "fill_container",
+              "height": 40,
+              "fill": "#161A24",
+              "stroke": "#262C3E",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JDYE7",
+                  "name": "Form Title",
+                  "fill": "#5C6478",
+                  "content": "Form Elements",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "f60JF",
+              "name": "Form Body",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "gap": 16,
+              "padding": 20,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "eXogp",
+                  "name": "Input Default",
+                  "width": 200,
+                  "height": 36,
+                  "fill": "#1E2330",
+                  "cornerRadius": 6,
+                  "stroke": "#6B7280",
+                  "strokeWidth": 1,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "E9tm40",
+                      "name": "Input Placeholder",
+                      "fill": "#9CA3AF",
+                      "content": "搜尋人員...",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "tBVYn",
+                  "name": "Input Focus",
+                  "width": 200,
+                  "height": 36,
+                  "fill": "#1E2330",
+                  "cornerRadius": 6,
+                  "stroke": "#6B7280",
+                  "strokeWidth": 1,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cTTCD",
+                      "name": "Input Value",
+                      "fill": "#E8EAF0",
+                      "content": "王小明",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Nowm4",
+                  "name": "Select",
+                  "width": 140,
+                  "height": 36,
+                  "fill": "#1E2330",
+                  "cornerRadius": 6,
+                  "stroke": "#6B7280",
+                  "strokeWidth": 1,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fCw9H",
+                      "name": "Select Value",
+                      "fill": "#9CA3AF",
+                      "content": "全部角色",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZzPHl",
+                      "name": "Select Arrow",
+                      "fill": "#5C6478",
+                      "content": "▾",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "wvVIc",
+          "name": "Card Section",
+          "clip": true,
+          "width": "fill_container",
+          "fill": "#1A1E2A",
+          "cornerRadius": 8,
+          "stroke": "#262C3E",
+          "strokeWidth": 1,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "U9vuA",
+              "name": "Card Header",
+              "width": "fill_container",
+              "height": 40,
+              "fill": "#161A24",
+              "stroke": "#262C3E",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "I7Uy3",
+                  "name": "Card Title",
+                  "fill": "#5C6478",
+                  "content": "Stat Cards",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "B6FBzZ",
+              "name": "Card Body",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "gap": 12,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "TpKGq",
+                  "name": "後台人員 Preview Card",
+                  "width": "fill_container",
+                  "height": 80,
+                  "fill": "#13161E",
+                  "cornerRadius": 8,
+                  "stroke": "#262C3E",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZcCYs",
+                      "name": "後台人員 Big",
+                      "fill": "#E8EAF0",
+                      "content": "12",
+                      "fontFamily": "Inter",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "beWwi",
+                      "name": "後台人員 Sub",
+                      "fill": "#9CA3AF",
+                      "content": "後台人員",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "K6EuB",
+                  "name": "本月新增 Preview Card",
+                  "width": "fill_container",
+                  "height": 80,
+                  "fill": "#13161E",
+                  "cornerRadius": 8,
+                  "stroke": "#262C3E",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YoEev",
+                      "name": "本月新增 Big",
+                      "fill": "#34D399",
+                      "content": "3",
+                      "fontFamily": "Inter",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "TU7QQ",
+                      "name": "本月新增 Sub",
+                      "fill": "#9CA3AF",
+                      "content": "本月新增",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "odNeF",
+                  "name": "今日登入 Preview Card",
+                  "width": "fill_container",
+                  "height": 80,
+                  "fill": "#13161E",
+                  "cornerRadius": 8,
+                  "stroke": "#262C3E",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "or1HS",
+                      "name": "今日登入 Big",
+                      "fill": "#60A5FA",
+                      "content": "7",
+                      "fontFamily": "Inter",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "e8mE3k",
+                      "name": "今日登入 Sub",
+                      "fill": "#9CA3AF",
+                      "content": "今日登入",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
