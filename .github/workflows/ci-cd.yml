@@ -1,6 +1,13 @@
 # workflow 名稱，顯示在 GitHub Actions 頁面
 name: CI/CD
 
+# ────────────────────────────────────────────
+# 全域環境變數：Go 版本統一在此維護
+# 要升版只需改這一個地方，CI 工具鏈與 Docker image 都會跟著更新
+# ────────────────────────────────────────────
+env:
+  GO_VERSION: "1.26"
+
 # 觸發條件
 on:
   # 對 develop 分支發起 PR 時觸發
@@ -23,12 +30,12 @@ jobs:
       # 檢出專案原始碼到 runner
       - uses: actions/checkout@v4
 
-      # 安裝 Go 環境，版本從 go.mod 的 go 指令自動讀取
+      # 安裝 Go 環境，版本統一讀取頂層 env.GO_VERSION
       # cache: true 快取模組下載，加速後續執行
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version-file: go.mod
+          go-version: ${{ env.GO_VERSION }}
           cache: true
 
       # 執行 golangci-lint 靜態分析，version: latest 使用最新穩定版
@@ -78,21 +85,19 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       # 建置 Docker image 並推送到 GHCR
+      # build-args 把 GO_VERSION 傳入 Dockerfile 的 ARG，確保 image 用相同版本
       # cache-from / cache-to 使用 GitHub Actions 快取層，加速重複建置
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          # Docker build context 為專案根目錄
           context: .
-          # 指定 Dockerfile 路徑
           file: ./Dockerfile
-          # push: true 表示建置後自動推送（false 只建置不推）
           push: true
           # image tag 格式：ghcr.io/<owner>/game-backend:develop
           tags: ghcr.io/${{ github.repository_owner }}/game-backend:develop
-          # 從 GHA 快取讀取舊 layer
+          # 把 GO_VERSION 傳進 Dockerfile，讓 Docker build 用同一個版本
+          build-args: GO_VERSION=${{ env.GO_VERSION }}
           cache-from: type=gha
-          # 把新 layer 寫回 GHA 快取（mode=max 快取所有 layer）
           cache-to: type=gha,mode=max
 
   # ────────────────────────────────────────────

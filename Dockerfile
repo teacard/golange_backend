@@ -3,9 +3,12 @@
 # 使用完整的 Go 工具鏈編譯出靜態二進位檔
 # ────────────────────────────────────────────
 
-# 以官方 Go 1.26 Alpine 映像作為編譯基底，並命名此階段為 builder
-# Alpine 體積輕巧，適合作為編譯環境
-FROM golang:1.26-alpine AS builder
+# GO_VERSION 由 CI/CD 的 build-args 傳入（預設 1.26），統一版本管理
+# 要升版只需修改 ci-cd.yml 的 env.GO_VERSION，Dockerfile 不需動
+ARG GO_VERSION=1.26
+
+# 以官方 Go Alpine 映像作為編譯基底，版本由上方 ARG 決定
+FROM golang:${GO_VERSION}-alpine AS builder
 
 # 設定容器內的工作目錄，後續所有指令都在此路徑下執行
 WORKDIR /app
