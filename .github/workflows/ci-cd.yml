@@ -42,7 +42,7 @@ jobs:
       # 釘住 v2.12.2：golangci-lint v2.x 系列首個支援 Go 1.26 的穩定版
       # version: latest 先前會拿到 v1.64.8（以 Go 1.24 編譯），無法分析 Go 1.25+ 模組
       - name: golangci-lint
-        uses: golangci/golangci-lint-action@v6
+        uses: golangci/golangci-lint-action@v7
         with:
           version: v2.12.2
 
