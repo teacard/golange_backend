@@ -43,7 +43,7 @@ func main() {
 	if err != nil {
 		log.Fatal("Migration 初始化失敗：", err)
 	}
-	defer m.Close()
+	defer func() { _, _ = m.Close() }()
 
 	switch cmd {
 	case "migrate:up":

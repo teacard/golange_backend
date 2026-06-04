@@ -22,7 +22,7 @@ var App *Config
 
 // Load 讀取 .env 並初始化 App
 func Load() {
-	godotenv.Load() // 找不到 .env 不會報錯，直接讀系統環境變數
+	_ = godotenv.Load() // 找不到 .env 屬預期情境，直接讀系統環境變數
 
 	App = &Config{
 		DBHost:     getEnv("DB_HOST", "localhost"),
