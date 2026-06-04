@@ -38,17 +38,17 @@ func Init(log logger.Logger) {
 	log.Info("資料庫連線成功")
 
 	// ── 2. 執行 golang-migrate（SQL 版本化 migration）──────────
-	runMigrations(log, dsn)
+	runMigrations(log)
 }
 
 // runMigrations 讀取 migrations/ 目錄內的 SQL 檔案並執行到最新版本
-func runMigrations(log logger.Logger, dsn string) {
+func runMigrations(log logger.Logger) {
 	// file source 路徑（相對於執行目錄）
 	m, err := migrate.New("file://migrations", "postgres://"+buildPGURL())
 	if err != nil {
 		log.Fatal("Migration 初始化失敗：", err)
 	}
-	defer m.Close()
+	defer func() { _, _ = m.Close() }()
 
 	if err := m.Up(); err != nil {
 		if errors.Is(err, migrate.ErrNoChange) {

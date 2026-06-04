@@ -25,5 +25,7 @@ func main() {
 	r := router.Setup()
 
 	log.Infof("伺服器啟動於 http://localhost:%s", config.App.ServerPort)
-	r.Run(":" + config.App.ServerPort)
+	if err := r.Run(":" + config.App.ServerPort); err != nil {
+		log.Fatal("伺服器啟動失敗：", err)
+	}
 }
