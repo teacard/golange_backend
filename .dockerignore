@@ -1,0 +1,9 @@
+.git
+.env
+*.db
+*.exe
+tmp/
+.air.toml
+.claude/
+docs/
+openspec/
