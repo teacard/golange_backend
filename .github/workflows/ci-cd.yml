@@ -103,32 +103,25 @@ jobs:
           cache-to: type=gha,mode=max
 
   # ────────────────────────────────────────────
-  # Job 3：Deploy（部署到自架 WSL 測試機）
+  # Job 3：Deploy（觸發 game-docker repo 的 VPS 部署）
   # 必須 build-push 成功才執行
   # ────────────────────────────────────────────
   deploy:
-    name: Deploy to WSL Test
-    # 使用本地 self-hosted runner（WSL 環境）
-    runs-on: self-hosted
+    name: Trigger VPS Deploy
+    # 透過 GitHub API 觸發，不需要 self-hosted runner
+    runs-on: ubuntu-latest
     # 必須 build-push job 成功才接著跑
     needs: build-push
     # 同樣只在 push 到 develop 時執行
     if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
     steps:
-      # 拉取最新的 docker compose 設定（存放在本地 ~/docker 目錄）
-      - name: Pull latest docker config
+      # 呼叫 GitHub API 觸發 game-docker repo 的 deploy-develop workflow
+      # DEPLOY_PAT：需有 actions:write 權限的 PAT，設定在本 repo 的 secrets
+      - name: Trigger game-docker deploy workflow
         run: |
-          cd ~/docker
-          git pull
-
-      # 拉取剛推上去的新版 backend image
-      - name: Pull new backend image
-        run: |
-          cd ~/docker
-          docker compose pull game_backend
-
-      # 以新 image 重啟所有容器（-d 為背景執行）
-      - name: Restart containers
-        run: |
-          cd ~/docker
-          docker compose up -d
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.DEPLOY_PAT }}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/teacard/game-docker/actions/workflows/deploy-develop.yml/dispatches \
+            -d '{"ref":"develop"}'
