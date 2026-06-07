@@ -3,3 +3,6 @@
 *.exe
 tmp/
 .air.toml
+.docs
+.claude/
+docs/
