@@ -16,5 +16,13 @@ tmp/
 # Claude Code 本地設定、skills、creatures 等開發輔助資料
 .claude/
 
+# OpenSpec 變更追蹤文件（本地開發用，不進 git）
+openspec/
+
 # 設計稿、規格文件等本地文件目錄
-docs/
+docs/pencil/
+
+# Swagger 自動產生的 API 文件（由 CI/CD 與本地 swag init 產生）
+docs/docs.go
+docs/swagger.json
+docs/swagger.yaml

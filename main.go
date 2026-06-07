@@ -3,11 +3,17 @@ package main
 import (
 	"game-backend/config"
 	"game-backend/db"
+	_ "game-backend/docs"
 	"game-backend/logger"
 	"game-backend/router"
 	"game-backend/seeder"
 )
 
+// @title           Familiar API
+// @version         1.0
+// @description     Familiar後端 API 文件
+// @host            localhost:8000
+// @BasePath        /api
 func main() {
 	// 1. 載入 .env 設定
 	config.Load()
