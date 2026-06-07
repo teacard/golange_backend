@@ -1,8 +1,20 @@
+# 環境變數，含資料庫密碼等敏感資訊
 .env
+
+# SQLite 資料庫檔案
 *.db
+
+# Go 編譯產出的執行檔
 *.exe
+
+# Air 熱重載的暫存目錄
 tmp/
+
+# Air 熱重載設定檔（本地自訂）
 .air.toml
-.docs
+
+# Claude Code 本地設定、skills、creatures 等開發輔助資料
 .claude/
+
+# 設計稿、規格文件等本地文件目錄
 docs/
