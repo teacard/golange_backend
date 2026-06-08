@@ -23,6 +23,9 @@ RUN go mod download
 # 將專案所有原始碼複製進容器（排除 .dockerignore 列出的項目）
 COPY . .
 
+# 安裝 swag CLI 並產生 Swagger docs（docs/ 被 .gitignore 排除，需在此重新產生）
+RUN go install github.com/swaggo/swag/cmd/swag@v1.16.6 && swag init
+
 # 編譯 Go 程式：
 #   CGO_ENABLED=0  停用 CGO，產生純靜態二進位，不依賴 C 函式庫
 #   GOOS=linux     跨平台編譯目標設為 Linux
