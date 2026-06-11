@@ -1,0 +1,11 @@
+{
+  "ADMIN_VIEW": "Admin-View",
+  "ADMIN_EDIT": "Admin-Edit",
+  "ADMIN_DELETE": "Admin-Delete",
+  "PLAYER_VIEW": "Player-View",
+  "PLAYER_EDIT": "Player-Edit",
+  "PLAYER_DELETE": "Player-Delete",
+  "ANNOUNCEMENT_VIEW": "Announcement-View",
+  "ANNOUNCEMENT_EDIT": "Announcement-Edit",
+  "ANNOUNCEMENT_DELETE": "Announcement-Delete"
+}

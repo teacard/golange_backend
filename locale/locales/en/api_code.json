@@ -1,0 +1,4 @@
+{
+  "ROLE_NAME_TAKEN": "Role name already exists",
+  "ROLE_IN_USE": "This role is still in use and cannot be deleted"
+}

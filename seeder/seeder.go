@@ -14,7 +14,6 @@ func RunAll(log logger.Logger) {
 	log.Info("開始執行 Seeder...")
 
 	SeedPermissions(db.DB, log)
-	SeedPlayers(log)
 
 	log.Info("Seeder 執行完畢")
 }

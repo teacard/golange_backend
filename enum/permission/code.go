@@ -26,19 +26,9 @@ const (
 	AnnouncementDelete Code = "ANNOUNCEMENT_DELETE"
 )
 
-// Name 將 Code 轉為顯示名稱
-func (c Code) Name() string {
-	return map[Code]string{
-		AdminView:          "後台人員-檢視",
-		AdminEdit:          "後台人員-編輯",
-		AdminDelete:        "後台人員-刪除",
-		PlayerView:         "遊戲會員-檢視",
-		PlayerEdit:         "遊戲會員-編輯",
-		PlayerDelete:       "遊戲會員-刪除",
-		AnnouncementView:   "公告-檢視",
-		AnnouncementEdit:   "公告-編輯",
-		AnnouncementDelete: "公告-刪除",
-	}[c]
+// LocaleKey 回傳此權限碼對應的 locale key（對應 locales/*/permission.json）
+func (c Code) LocaleKey() string {
+	return string(c)
 }
 
 // Cases 回傳所有已定義的權限碼
