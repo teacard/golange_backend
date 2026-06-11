@@ -1,0 +1,5 @@
+{
+  "required": "{{.Field}} 為必填",
+  "max": "{{.Field}} 最多 {{.Param}} 個字",
+  "positiveInt": "{{.Field}} 必須是正整數"
+}

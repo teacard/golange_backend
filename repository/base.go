@@ -1,6 +1,10 @@
 package repository
 
-import "gorm.io/gorm"
+import (
+	"maps"
+
+	"gorm.io/gorm"
+)
 
 // BaseRepository 泛型通用 Repository
 // T 可以是任何 model（Creature、Player 等）
@@ -92,6 +96,34 @@ func (r *BaseRepository[T]) Count(conditions map[string]any, extraFactories ...F
 	var zero T
 	err = r.applyFilters(fs).Model(&zero).Count(&count).Error
 	return count, err
+}
+
+// PaginationResult 分頁查詢結果，包含資料列表與總筆數
+type PaginationResult[T any] struct {
+	Data  []T
+	Total int64
+}
+
+// Paginate 執行分頁查詢，內部自動合併 FindAll 與 Count 兩次查詢
+// conditions 只需帶過濾條件，limit/offset 由 page、perPage 自動計算
+func (r *BaseRepository[T]) Paginate(page, perPage int, conditions map[string]any, extraFactories ...FilterFactory) (PaginationResult[T], error) {
+	total, err := r.Count(conditions, extraFactories...)
+	if err != nil {
+		return PaginationResult[T]{}, err
+	}
+
+	dataConditions := map[string]any{
+		"limit":  perPage,
+		"offset": (page - 1) * perPage,
+	}
+	maps.Copy(dataConditions, conditions)
+
+	data, err := r.FindAll(dataConditions, extraFactories...)
+	if err != nil {
+		return PaginationResult[T]{}, err
+	}
+
+	return PaginationResult[T]{Data: data, Total: total}, nil
 }
 
 // Create 新增一筆資料

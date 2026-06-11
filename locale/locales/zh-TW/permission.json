@@ -1,0 +1,11 @@
+{
+  "ADMIN_VIEW": "後台人員-檢視",
+  "ADMIN_EDIT": "後台人員-編輯",
+  "ADMIN_DELETE": "後台人員-刪除",
+  "PLAYER_VIEW": "遊戲會員-檢視",
+  "PLAYER_EDIT": "遊戲會員-編輯",
+  "PLAYER_DELETE": "遊戲會員-刪除",
+  "ANNOUNCEMENT_VIEW": "公告-檢視",
+  "ANNOUNCEMENT_EDIT": "公告-編輯",
+  "ANNOUNCEMENT_DELETE": "公告-刪除"
+}

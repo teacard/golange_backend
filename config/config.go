@@ -15,6 +15,7 @@ type Config struct {
 	DBName     string
 	DBSSLMode  string
 	ServerPort string
+	JWTSecret  string
 }
 
 // App 是全域設定實例，載入後直接用 config.App.DBHost 存取
@@ -32,6 +33,7 @@ func Load() {
 		DBName:     getEnv("DB_NAME", "game_db"),
 		DBSSLMode:  getEnv("DB_SSLMODE", "disable"),
 		ServerPort: getEnv("SERVER_PORT", "8000"),
+		JWTSecret:  getEnv("JWT_SECRET", ""),
 	}
 }
 
