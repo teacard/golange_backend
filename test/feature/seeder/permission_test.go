@@ -3,12 +3,18 @@ package seeder_test
 import (
 	"testing"
 
+	"game-backend/locale"
 	"game-backend/model"
 	"game-backend/seeder"
 	"game-backend/test/shared"
 
 	"github.com/stretchr/testify/assert"
 )
+
+func TestMain(m *testing.M) {
+	locale.Init()
+	m.Run()
+}
 
 // TestSeedPermissions_CreatesAll 驗證執行後資料庫存在 9 筆正確的 permission
 func TestSeedPermissions_CreatesAll(t *testing.T) {
