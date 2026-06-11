@@ -3,12 +3,18 @@ package seeder_test
 import (
 	"testing"
 
+	"game-backend/locale"
 	"game-backend/seeder"
 	"game-backend/test/shared"
 
 	sqlmock "github.com/DATA-DOG/go-sqlmock"
 	"github.com/stretchr/testify/assert"
 )
+
+func TestMain(m *testing.M) {
+	locale.Init()
+	m.Run()
+}
 
 // TestSeedPermissions_CallsFirstOrCreateForEachPermission 驗證每個 permission 都會觸發一次 FirstOrCreate
 func TestSeedPermissions_CallsFirstOrCreateForEachPermission(t *testing.T) {
