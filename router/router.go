@@ -1,49 +1,48 @@
+// Package router 負責建立 HTTP 路由引擎並將所有路由群組組裝在一起。
+//
+// 各路由群組（swagger、admin-api 等）定義在獨立檔案中，
+// 並透過各自的 init() 向 registry 報名。
+// Setup() 只負責建立引擎與呼叫 setupAll，不需隨路由增減而修改。
 package router
 
 import (
-	"net/http"
-
-	"game-backend/db"
-	enumhandler "game-backend/handler/enum"
-	rolehandler "game-backend/handler/role"
+	adminapi "game-backend/router/admin_api"
 	"game-backend/middleware"
-	rolesvc "game-backend/service/role"
-
-	swaggerFiles "github.com/swaggo/files"
-	ginSwagger "github.com/swaggo/gin-swagger"
 
 	"github.com/gin-gonic/gin"
 )
 
+// routeSetup 是各路由群組的設定函式型別
+type routeSetup func(r *gin.Engine)
+
+// groups 儲存所有透過 registerGroup() 登記的路由群組
+var groups []routeSetup
+
+// registerGroup 供各群組檔案在 init() 裡呼叫，將自己登記到 groups。
+func registerGroup(fn routeSetup) {
+	groups = append(groups, fn)
+}
+
+// setupAll 用 for 迴圈依序呼叫所有已登記的路由群組設定函式。
+func setupAll(r *gin.Engine) {
+	for _, fn := range groups {
+		fn(r)
+	}
+}
+
+func init() {
+	// 將各路由群組登記至 registry，往後新增群組在此加一行即可
+	registerGroup(adminapi.Setup)
+}
+
+// Setup 建立並回傳設定好的 Gin 引擎。
 func Setup() *gin.Engine {
 	r := gin.Default()
 	r.Use(middleware.Locale())
 
-	// Swagger UI：http://localhost:8000/swagger/admin-api（後台）
-	// 未來前台：http://localhost:8000/swagger/api
-	adminSwaggerHandler := ginSwagger.WrapHandler(swaggerFiles.Handler)
-	r.GET("/swagger/admin-api/*any", func(c *gin.Context) {
-		if c.Param("any") == "/" {
-			c.Redirect(http.StatusMovedPermanently, "/swagger/admin-api/index.html")
-			return
-		}
-		adminSwaggerHandler(c)
-	})
-
-	adminAPI := r.Group("/admin-api", middleware.Auth())
-	{
-		roles := adminAPI.Group("/roles")
-		rh := rolehandler.NewRoleHandler(rolesvc.NewRoleService(db.DB))
-		roles.GET("", rh.List)
-		roles.GET("/:id", rh.GetByID)
-		roles.POST("", rh.Create)
-		roles.PUT("/:id", rh.Update)
-		roles.DELETE("/:id", rh.Delete)
-
-		enums := adminAPI.Group("/enums")
-		eh := enumhandler.NewEnumHandler()
-		enums.GET("/api-code", eh.ListApiCodes)
-	}
+	// 所有路由群組已透過 init() 登記至 registry，
+	// setupAll 用 for 迴圈統一掛載，不需在此逐一列舉
+	setupAll(r)
 
 	return r
 }
