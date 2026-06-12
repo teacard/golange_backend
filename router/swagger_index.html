@@ -30,7 +30,11 @@
     { label: 'http://localhost:8000',                      specUrl: '/swagger/spec-local.json' },
     { label: 'https://familiar.teacard-side-project.org', specUrl: '/swagger/spec-test.json'  }
   ];
-  var currentSpecUrl = swaggerServers[0].specUrl;
+
+  // 依照當前 hostname 自動選擇預設規格：
+  // 本機（localhost / 127.0.0.1）→ 本機規格，其他 → 測試站規格
+  var isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  var currentSpecUrl = isLocal ? swaggerServers[0].specUrl : swaggerServers[1].specUrl;
 
   // 將 Swagger UI 原本的 Schemes 下拉換成 Base URL 選單
   function injectServerSelector() {
