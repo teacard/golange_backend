@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Familiar API</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css">
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32"/>
+  <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16"/>
+  <style>
+    html {
+      box-sizing: border-box;
+      overflow-y: scroll;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    body {
+      margin: 0;
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+<div id="swagger-ui"></div>
+
+<script src="./swagger-ui-bundle.js"></script>
+<script src="./swagger-ui-standalone-preset.js"></script>
+<script>
+  var swaggerServers = [
+    { label: 'http://localhost:8000',                      specUrl: '/swagger/spec-local.json' },
+    { label: 'https://familiar.teacard-side-project.org', specUrl: '/swagger/spec-test.json'  }
+  ];
+  var currentSpecUrl = swaggerServers[0].specUrl;
+
+  // 將 Swagger UI 原本的 Schemes 下拉換成 Base URL 選單
+  function injectServerSelector() {
+    var schemes = document.querySelector('.swagger-ui .schemes');
+    if (!schemes) {
+      // Swagger UI 尚未渲染完成，稍後重試
+      setTimeout(injectServerSelector, 50);
+      return;
+    }
+    if (document.getElementById('server-select')) return;
+
+    schemes.innerHTML = '';
+
+    var label = document.createElement('label');
+    label.textContent = 'BASE URL';
+    schemes.appendChild(label);
+
+    var wrapper = document.createElement('div');
+    wrapper.className = 'select-label';
+
+    var select = document.createElement('select');
+    select.id = 'server-select';
+    swaggerServers.forEach(function(s) {
+      var opt = document.createElement('option');
+      opt.value = s.specUrl;
+      opt.textContent = s.label;
+      if (s.specUrl === currentSpecUrl) opt.selected = true;
+      select.appendChild(opt);
+    });
+    select.addEventListener('change', function() {
+      currentSpecUrl = this.value;
+      initSwagger(currentSpecUrl);
+    });
+
+    wrapper.appendChild(select);
+    schemes.appendChild(wrapper);
+  }
+
+  function initSwagger(specUrl) {
+    currentSpecUrl = specUrl;
+    window.ui = SwaggerUIBundle({
+      url: specUrl,
+      dom_id: '#swagger-ui',
+      validatorUrl: null,
+      oauth2RedirectUrl: window.location.protocol + '//' + window.location.host +
+        window.location.pathname.replace(/\/[^\/]*$/, '/') + 'oauth2-redirect.html',
+      persistAuthorization: false,
+      presets: [
+        SwaggerUIBundle.presets.apis,
+        SwaggerUIStandalonePreset
+      ],
+      plugins: [
+        SwaggerUIBundle.plugins.DownloadUrl
+      ],
+      layout: 'StandaloneLayout',
+      docExpansion: 'list',
+      deepLinking: true,
+      defaultModelsExpandDepth: 1,
+      onComplete: injectServerSelector
+    });
+  }
+
+  window.onload = function() {
+    initSwagger(currentSpecUrl);
+  };
+</script>
+</body>
+</html>

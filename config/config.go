@@ -8,14 +8,15 @@ import (
 
 // Config 對應 .env 的所有設定
 type Config struct {
-	DBHost     string
-	DBPort     string
-	DBUser     string
-	DBPassword string
-	DBName     string
-	DBSSLMode  string
-	ServerPort string
-	JWTSecret  string
+	DBHost          string
+	DBPort          string
+	DBUser          string
+	DBPassword      string
+	DBName          string
+	DBSSLMode       string
+	ServerPort      string
+	JWTSecret       string
+	SwaggerTestHost string // Swagger UI 測試站切換用的主機名稱（不含 scheme）
 }
 
 // App 是全域設定實例，載入後直接用 config.App.DBHost 存取
@@ -32,8 +33,9 @@ func Load() {
 		DBPassword: getEnv("DB_PASSWORD", ""),
 		DBName:     getEnv("DB_NAME", "game_db"),
 		DBSSLMode:  getEnv("DB_SSLMODE", "disable"),
-		ServerPort: getEnv("SERVER_PORT", "8000"),
-		JWTSecret:  getEnv("JWT_SECRET", ""),
+		ServerPort:      getEnv("SERVER_PORT", "8000"),
+		JWTSecret:       getEnv("JWT_SECRET", ""),
+		SwaggerTestHost: getEnv("SWAGGER_TEST_HOST", ""),
 	}
 }
 
